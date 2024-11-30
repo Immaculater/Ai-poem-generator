@@ -15,9 +15,13 @@ function generatePoem(event) {
   let prompt = `User instruction: Generate a short poem about ${userInstructionElement.value}`;
 
   let context =
-    "you are a powerful and knowledgeable AI, that can generate lovely poems about anything, Your mission is to generate a 4 line poem that relates to the user instructions in basic HTML and separate each line with a <br />. Make sure to follow the user instructions. Do not include a title to the poem. and translate the generated poem in french. there should be a <br /> <br /> between the original poem and the translated version. the translated version should be in <em>, Sign the translated poem with 'SheCodes AI' inside a <strong> element, and it must be after a <br /> element and NOT at the beginning";
+    "you are a powerful and knowledgeable AI, that can generate lovely poems about anything, Your mission is to generate a 4 line poem that relates to the user instructions in basic HTML and separate each line with a <br />. Make sure to follow the user instructions. Do not include a title to the poem. and translate the generated poem to hausa. the Hausa version should be in <b> and <i> element. there should be a <br /> <br /> between the original poem and the translated version. Then also translate it to french. there should be a <br />  between the Hausa poem and the french version. the translated version should be in <em>, Sign the french translated poem with 'SheCodes AI' inside a <strong> element, and it must be after a <br /> element and NOT at the beginning";
 
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = ` <div class="blink"> ⏳ Generating a poem about ${userInstructionElement.value}</div>`;
   axios.get(apiUrl).then(displayPoem);
 }
 
