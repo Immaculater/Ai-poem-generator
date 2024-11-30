@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
+    <div class="container">
     <header>
       <h1>My AI poem generator</h1>
     </header>
     <main>
       <form>
-        <input
+        <input class="instructions"
           type="text"
           placeholder="create a poem"
           required
           autofocus
           autocomplete="off"
         />
-        <input type="button" value="submit" />
+        <input class="bttn" type="button" value="submit" />
       </form>
-      <div>
+      <div class="poem">
         codding is fun
         <br />
         I love to write codes
@@ -39,6 +40,7 @@
         >render</a
       >
     </footer>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
