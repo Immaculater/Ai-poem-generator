@@ -7,37 +7,41 @@
     <title>Poem Generator</title>
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-    <header>
-      <h1>My AI poem generator</h1>
-    </header>
-    <main>
-      <form id="poem-generator-form">
-        <input class="instructions"
-          type="text"
-          placeholder="create a poem"
-          required
-          autofocus
-          autocomplete="off"
-        />
-        <input class="bttn" type="submit"/>
-      </form>
-      <div class="poem" id="poem">
-      </div>
-    </main>
-    <footer>
-      This project was coded by
-      <a target="_blank" href="https://github.com/Immaculater">Immaculater</a>
-      and is opensourced on
-      <a target="_blank" href="https://github.com/Immaculater/Ai-poem-generator"
-        >github</a
-      >, hosted on
-      <a target="_blank" href="https://ai-poem-generator-fvjj.onrender.com"
-        >render</a
-      >
-    </footer>
+      <header>
+        <h1>My AI poem generator</h1>
+      </header>
+      <main>
+        <form id="poem-generator-form">
+          <input
+            class="instructions"
+            id="user-instruction"
+            type="text"
+            placeholder="create a poem"
+            required
+            autofocus
+            autocomplete="off"
+          />
+          <input class="bttn" type="submit" />
+        </form>
+        <div class="poem" id="poem"></div>
+      </main>
+      <footer>
+        This project was coded by
+        <a target="_blank" href="https://github.com/Immaculater">Immaculater</a>
+        and is opensourced on
+        <a
+          target="_blank"
+          href="https://github.com/Immaculater/Ai-poem-generator"
+          >github</a
+        >, hosted on
+        <a target="_blank" href="https://ai-poem-generator-fvjj.onrender.com"
+          >render</a
+        >
+      </footer>
     </div>
     <script src="src/app.js"></script>
   </body>
