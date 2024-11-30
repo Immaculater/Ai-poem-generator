@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poem Generator</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <div class="container">
@@ -13,7 +14,7 @@
       <h1>My AI poem generator</h1>
     </header>
     <main>
-      <form>
+      <form id="poem-generator-form">
         <input class="instructions"
           type="text"
           placeholder="create a poem"
@@ -21,12 +22,9 @@
           autofocus
           autocomplete="off"
         />
-        <input class="bttn" type="button" value="submit" />
+        <input class="bttn" type="submit"/>
       </form>
-      <div class="poem">
-        codding is fun
-        <br />
-        I love to write codes
+      <div class="poem" id="poem">
       </div>
     </main>
     <footer>
